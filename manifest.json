@@ -21,6 +21,6 @@
     "start_url": "/pesterchum",
     "background_color": "#FFFFFF",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/pesterchum",
     "theme_color": "#FFFFFF"
   }

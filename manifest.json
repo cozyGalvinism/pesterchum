@@ -1,0 +1,26 @@
+{
+    "short_name": "Pesterchum",
+    "name": "Pesterchum",
+    "icons": [
+      {
+        "src": "/pesterchum-256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "/pesterchum-128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "/pesterchum-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/?utm_source=a2hs",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#FFFFFF"
+  }

@@ -1,0 +1,28 @@
+{
+    "baseUrl": ".",
+    "include": ["src/**/*"],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "esnext",
+        "module": "es2015",
+        "paths": {
+            "@/*": ["./*"],
+            "@": [
+                "./index.js",
+                "./index.json",
+                "./index.vue",
+                "./index.scss",
+                "./index.css"
+            ],
+            "@src/*": ["src/*"],
+            "@src": [
+                "src/index.js",
+                "src/index.json",
+                "src/index.vue",
+                "src/index.scss",
+                "src/index.css"
+            ],
+            "@/components/*": ["src/components/*"]
+        }   
+    }
+}

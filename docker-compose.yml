@@ -1,0 +1,31 @@
+# This Docker container is used as a gateway between IRC and Pesterchum.
+# The reason why this is necessary is because Chrome and Firefox block
+# certain ports (like IRC) in order to prevent abuse.
+#
+# webircgateway acts as a gateway by hosting a websocket endpoint.
+# The following commands will be consumed by the gateway itself and will
+# not be forwarded:
+#
+# "ENCODING CP1252"             Instructs the gateway to convert all text to the
+#                               CP1252 encoding. This is needed for IRC servers
+#                               that can't process UTF-8
+#
+# "HOST irc.network.org:6667"   Instructs the gateway to connect to the specified
+#                               server on the specified port (+ before the port
+#                               signifies TLS). Only works, if "gateway = true"
+#                               in the configuration
+#
+# "CAPTCHA captcha-response"    Verifies the client with recaptcha. This is
+#                               necessary for establishing a connection.
+#
+# If you would like to host your own gateway and provide it for the general public
+# make sure to create an issue in this repository.
+
+version: '3'
+services: 
+  gateway:
+    image: jtbouse/webircgateway
+    volumes: 
+    - './gatewayconfig/config.conf:/app/config.conf'
+    ports:
+    - '4130:80'

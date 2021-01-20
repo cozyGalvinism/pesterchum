@@ -55,7 +55,10 @@ const mutations = {
     [SET_APP_COLOR](state, color) {
         state.appColor = color
         saveState('settings.appColor', color)
-        document.documentElement.style.setProperty('--md-theme-' + state.theme + '-primary', color)
+        document.documentElement.style.setProperty('--md-theme-default-primary', color)
+        document.documentElement.style.setProperty('--md-theme-default-primary-on-background', color)
+        document.documentElement.style.setProperty('--md-theme-default-dark-primary', color)
+        document.documentElement.style.setProperty('--md-theme-default-dark-primary-on-background', color)
     }
 }
 

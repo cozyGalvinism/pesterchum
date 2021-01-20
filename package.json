@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack serve --config ./webpack.config.js",
     "build": "webpack",
-    "deploy": "gh-pages -d dist -r https://github.com/cozyGalvinism/pesterchum"
+    "deploy": "node deploy.js"
   },
   "author": "cozyGalvinism",
   "license": "MIT",

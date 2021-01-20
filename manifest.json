@@ -18,7 +18,6 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "/pesterchum?utm_source=a2hs",
     "background_color": "#FFFFFF",
     "display": "standalone",
     "scope": "/",

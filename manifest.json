@@ -18,6 +18,7 @@
         "sizes": "512x512"
       }
     ],
+    "start_url": "/pesterchum",
     "background_color": "#FFFFFF",
     "display": "standalone",
     "scope": "/",

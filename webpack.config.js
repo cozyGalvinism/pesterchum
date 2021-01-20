@@ -14,7 +14,8 @@ module.exports = (env, argv) => ({
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js',
+    publicPath: "/pesterchum"
   },
 
   node: false,

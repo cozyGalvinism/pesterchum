@@ -58,11 +58,11 @@ export default {
     mounted() {
       this.$material.theming.theme = this.getTheme
       document.documentElement.style.setProperty('--md-theme-' + this.getTheme + '-primary', this.getAppColor)
-      this.$irc.connect({
-        host: 'irc.freenode.net',
-        port: 6667,
-        nick: 'PesterchumBud'
-      })
+      // this.$irc.connect({
+      //   host: 'irc.freenode.net',
+      //   port: 6667,
+      //   nick: 'PesterchumBud'
+      // })
     }
 }
 </script>

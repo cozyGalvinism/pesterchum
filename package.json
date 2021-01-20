@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --config ./webpack.config.js",
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "deploy": "node deploy.js"
   },
   "author": "cozyGalvinism",

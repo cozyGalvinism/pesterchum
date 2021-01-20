@@ -38,7 +38,7 @@ Vue.use(VueMq, {
 })
 
 // IRC Client
-Vue.use(PesterchumIRC)
+// Vue.use(PesterchumIRC)
 
 new Vue({
     store,

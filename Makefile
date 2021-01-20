@@ -1,7 +1,7 @@
 all: clean build
 
 build:
-	npm run build --production
+	npm run build
 
 clean:
 	rm -rf ./dist/*

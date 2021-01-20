@@ -15,7 +15,7 @@ module.exports = (env, argv) => ({
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: "/pesterchum"
+    publicPath: "/pesterchum/"
   },
 
   node: false,
@@ -77,10 +77,10 @@ module.exports = (env, argv) => ({
             toType: 'dir'
         }]
     }),
-    /*new InjectManifest({
-      swSrc: './src/pwabuilder-sw.js',
-      swDest: './pwabuilder-sw.js'
-    })*/
+    new InjectManifest({
+      swSrc: './src/sw.js',
+      swDest: './sw.js'
+    })
   ],
 
   optimization: {

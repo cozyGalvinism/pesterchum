@@ -1,4 +1,25 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="The new and improved Pesterchum client!"><meta name="theme-color" content="#FFFFFF"/><link rel="manifest" href="/pesterchum/manifest.json"><link rel="preconnect" href="https://storage.googleapis.com"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons"><link rel="shortcut icon" href="/pesterchum/favicon.ico" type="image/x-icon"><title>Pesterchum</title></head><body><noscript>To run this application, JavaScript is required to be enabled.</noscript><div id="app"></div><script type="module">import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="The new and improved Pesterchum client!"><meta name="theme-color" content="#FFFFFF"/><link rel="manifest" href="./manifest.json"><link rel="preconnect" href="https://storage.googleapis.com"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons"><link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"><title>Pesterchum</title></head><body><noscript>To run this application, JavaScript is required to be enabled.</noscript><div id="app"></div><script>if('serviceWorker' in navigator) {
+            window.addEventListener('load', async () => {
+                const registration = navigator.serviceWorker.register('./sw.js')
 
-        const el = document.createElement('pwa-update');
-        document.body.appendChild(el);</script><script src="/pesterchum/runtime~main.js"></script><script src="/pesterchum/909.js"></script><script src="/pesterchum/241.js"></script><script src="/pesterchum/437.js"></script><script src="/pesterchum/273.js"></script><script src="/pesterchum/842.js"></script><script src="/pesterchum/892.js"></script><script src="/pesterchum/679.js"></script><script src="/pesterchum/454.js"></script><script src="/pesterchum/337.js"></script><script src="/pesterchum/619.js"></script><script src="/pesterchum/699.js"></script><script src="/pesterchum/84.js"></script><script src="/pesterchum/411.js"></script><script src="/pesterchum/344.js"></script><script src="/pesterchum/123.js"></script><script src="/pesterchum/283.js"></script><script src="/pesterchum/476.js"></script><script src="/pesterchum/908.js"></script><script src="/pesterchum/913.js"></script><script src="/pesterchum/155.js"></script><script src="/pesterchum/main.js"></script></body></html>
+                if(registration.waiting) registration.waiting.postMessage('SKIP_WAITING')
+                registration.addEventListener('updatefound', () => {
+                    if(registration.installing) {
+                        registration.installing.addEventListener('statechange', () => {
+                            if(registration.waiting) {
+                                if(navigator.serviceWorker.controller) registration.waiting.postMessage('SKIP_WAITING')
+                                else console.log('App successfully installed!')
+                            }
+                        })
+                    }
+                })
+
+                let refreshing = false
+                navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    if (!refreshing) {
+                        window.location.reload()
+                        refreshing = true
+                    }
+                })
+            })
+        }</script><script src="/pesterchum/runtime~main.js"></script><script src="/pesterchum/909.js"></script><script src="/pesterchum/241.js"></script><script src="/pesterchum/437.js"></script><script src="/pesterchum/273.js"></script><script src="/pesterchum/842.js"></script><script src="/pesterchum/892.js"></script><script src="/pesterchum/679.js"></script><script src="/pesterchum/454.js"></script><script src="/pesterchum/337.js"></script><script src="/pesterchum/619.js"></script><script src="/pesterchum/699.js"></script><script src="/pesterchum/84.js"></script><script src="/pesterchum/411.js"></script><script src="/pesterchum/344.js"></script><script src="/pesterchum/123.js"></script><script src="/pesterchum/283.js"></script><script src="/pesterchum/476.js"></script><script src="/pesterchum/908.js"></script><script src="/pesterchum/913.js"></script><script src="/pesterchum/155.js"></script><script src="/pesterchum/main.js"></script></body></html>

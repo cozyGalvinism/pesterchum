@@ -24,7 +24,7 @@
 version: '3'
 services: 
   gateway:
-    image: jtbouse/webircgateway
+    image: cozygalvinism/webircgateway
     volumes: 
     - './gatewayconfig/config.conf:/app/config.conf'
     ports:

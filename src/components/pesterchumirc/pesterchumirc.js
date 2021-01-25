@@ -22,6 +22,7 @@ const PesterchumIRC = {
         this.mood = 0
 
         console.log("Connecting to pesterchum server " + this.server)
+        // TODO: Make this configurable
         this.connection = new WebSocket("wss://ircgw.galvinism.ink/webirc/websocket/")
         this.connection.onmessage = this.rawOnMessage
         this.connection.onopen = this.rawOnConnected

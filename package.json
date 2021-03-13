@@ -36,7 +36,7 @@
     "vue-material": "git+https://github.com/vuematerial/vue-material.git#dev",
     "vue-mq": "^1.0.1",
     "vue-native-color-picker": "^1.1.4",
-    "vue-router": "^3.4.9",
+    "vue-router": "^3.5.1",
     "vuex": "^3.6.0"
   }
 }
